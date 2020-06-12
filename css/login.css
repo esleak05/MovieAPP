@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 20px;    
+ 
+}   
+body{
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    background-color: #f9f9f9;
+}
+
+main{
+    max-width: 600px;
+    margin: 0 auto;
+}
+.login-container,
+.container-account{
+    border:1px solid black;
+    border-radius: 5px;
+}
+
+.login-container{    
+    width: 100%;
+    text-align: center;
+    background-color: white;  
+    font-size: 1em;
+    margin-top: 100px;
+    padding: 50px;    
+
+}
+.login-container i{
+    display: inline-block;
+    font-size: 3em;    
+}
+.form-login{
+    
+    display: flex;                
+    justify-content: center;
+    align-items: stretch;
+    flex-direction: column;
+    padding: 20px 0;
+  
+}
+.form-login div{
+    margin-bottom: 20px;
+}
+.form-group{
+    padding: 10px 5px;      
+}
+.form-group input{
+    display: inline-block;
+    width: 100%;
+    height: 30px;
+    padding: 20px;
+}
+.btn{
+    display: inline-block;
+    padding: 10px;
+}
+.btn-black{
+    color: white;
+    border: 1px solid black;
+    background-color: black;
+    transition: color 0.2s, border 0.2s, background-color 0.2s;
+}
+
+.btn-black:hover{
+    color: black;
+    border: 1px solid grey;
+    background-color: grey;
+}
+.container-account{
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    margin-top: 20px;
+}
+
