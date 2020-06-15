@@ -20,7 +20,7 @@ body{
 
 hr{
     margin: 10px 0;  
-    border: 1px solid #f9f9f9 ;
+    border: 1px solid #dddddd ;
     width: 100%;
 }
 nav {
@@ -89,14 +89,14 @@ li.push-item >input:focus{
 
 .section-filters,
 .section-popular{
-    border: 1px solid orange;
+
     margin-bottom: 50px;
 }
 
 
 main{
-    border: 1px solid red;
-    max-width: 1980px;    
+   
+    max-width: 1300px;    
     margin: 0 auto;
     display: flex;
     flex-flow: row wrap;
@@ -105,7 +105,7 @@ main{
 }
 
 .section-filters{
-    
+    padding: 85px 0;
     width: 25%;
  }
 
@@ -116,15 +116,15 @@ main{
 
 
  .title-section{
-     text-align: center;
-     border: 1px solid seagreen;
+  
+    text-align: center;
      margin-bottom: 20px;
-     padding:10px;
+     padding:10px 0;
  }
 
 
  .container-populars{
-     border:1px solid seagreen;
+     
      display: flex;
      flex-flow: row wrap;     
      justify-content: space-between;
@@ -132,22 +132,25 @@ main{
  }
 
  .container-movie{
-     border: 1px solid black;     
-     margin:50px;          
-     width: 16.66%;
+     border: 1px solid#dddddd;
+     box-shadow: 10px 10px 5px #aaaaaa;     
+     margin:0 25px 25px 25px;          
+     width: 25%;
      font-weight: 400;
      font-size: 0.8em;
+     border-radius: 15px;
+     overflow: hidden;
      
  }
 
 
 .container-movie div{
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .container-movie > .descripcion-movie{
         text-align: center;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid #dddddd;
         
 }
 
@@ -187,6 +190,7 @@ main{
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+    font-size: 0.7em;
     
 }
 
@@ -213,7 +217,8 @@ span.fa-chevron-right:hover{
 .container-sort > .filter,
 .container-filter > .filter,
 .realese-date,
-.genres-movie{
+.genres-movie,
+.container-certificacion{
     width: 100%;
     display: inline-flex;
     align-items: flex-start;    
@@ -263,7 +268,8 @@ span.fa-chevron-right:hover{
 }
 
 
-.genres-movie ul{
+.genres-movie ul,
+.container-certificacion ul{
     list-style-type: none;
     display: flex;
     flex-flow: row wrap;
@@ -271,11 +277,13 @@ span.fa-chevron-right:hover{
 }
 
 
-.genres-movie ul li {
+.genres-movie ul li,
+.container-certificacion ul li {
     margin:4px 10px 4px 0;
 }
 
-.genres-movie ul li a{
+.genres-movie ul li a,
+.container-certificacion ul li a{
     text-decoration: none;
     border-radius: 20px;
     border:  1px solid black;
@@ -286,20 +294,113 @@ span.fa-chevron-right:hover{
     transition: color 0.2s, background-color 0.2s, border 0.2s;
 }
 
-.genres-movie ul li a:hover{
+.genres-movie ul li a:hover,
+.container-certificacion ul li a:hover{
     color:black;
     background-color: #f9f9f9;
     border: 1px solid #f9f9f9;
 }
-/* nav ul li a{ 
-    text-decoration: none;   
-    display: inline-block;
-    padding:20px;
-    color:white;
+
+.container-footer{
+    width: 100%;       
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: black;
+    font-size: 0.8em;
 }
 
-nav ul li a:hover{
 
-    background-color: #f9f9f9;
+.container-basic,
+.container-involved,
+.container-community,
+.container-legal{
+    
+    margin: 30px 20px;
+
+}
+
+
+
+.container-basic ul,
+.container-involved ul,
+.container-community ul,
+.container-legal ul{
+    list-style-type: none;
+    /* padding: 10px;     */
+}
+
+.container-basic >h3,
+.container-involved >h3,
+.container-community >h3,
+.container-legal >h3{
+    text-align: left;  
+    color: white;
+    margin-bottom: 20px;
+}
+
+.container-basic li,
+.container-involved li,
+.container-community li,
+.container-legal li{
+    margin-bottom: 10px;  
+}
+
+.container-basic ul li a,
+.container-involved ul li a,
+.container-community ul li a,
+.container-legal ul li a{
+    text-decoration: none;
+    color: white;
+    display: inline-block;
+    border-bottom: 1px solid black;
+    transition: border-bottom 0.5s;
+
+}
+
+.container-basic ul li a:hover,
+.container-involved ul li a:hover,
+.container-community ul li a:hover,
+.container-legal ul li a:hover{
+    border-bottom: 1px solid white;
+}
+
+.movie-date{
+    opacity: 0.5;
+    margin:15px 0;
+}
+
+
+.movie-title{
+    font-size: 1em;
+    font-weight: 600;    
+}
+
+.movie-date{
+    font-size: 0.9em;    
+}
+
+.container-search{
+    width: 100%;
+}
+
+
+.btn-search {
+    width: 100%;
+    padding: 10px;
+    font-size: 1em;
+    color: white;
+    background-color: black;
+    border-radius: 15px;
+    border: 1px solid black;
+    
+}
+
+.btn-search:hover{
     color: black;
-} */
+    background-color: grey;
+    border: 1px solid grey;
+    border-radius: 15px; 
+    
+}
