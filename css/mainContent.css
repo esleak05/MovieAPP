@@ -23,6 +23,11 @@ hr{
     border: 1px solid #dddddd ;
     width: 100%;
 }
+
+.nav-mobile-version{
+    display: none;
+}
+
 nav {
     border: 1px solid black;
     margin-bottom: 50px;
@@ -127,8 +132,7 @@ main{
      
      display: flex;
      flex-flow: row wrap;     
-     justify-content: space-between;
-     
+    
  }
 
  .container-movie{

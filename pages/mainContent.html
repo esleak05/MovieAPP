@@ -5,13 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/mainContent.css" type="text/css">
+    <link rel="stylesheet" href="../css/mobile/mainContentMobile.css" type="text/css">
     <script src="https://kit.fontawesome.com/05e1420fce.js" crossorigin="anonymous"></script>
     <title>MovieAPP|Movies</title>
 </head>
 
 <body>
     <header>
-        <nav>
+        <nav class="nav-mobile-version">
+            <ul>
+                <li><a href=""><i class="fa fa-user-circle" aria-hidden="true"></i></a></li>
+                <li><a href=""><i class="fas fa-bars" aria-hidden="true"></i></a></li>
+            </ul>
+        </nav>
+
+        <nav class="nav-desktop-version">
             <ul>
                 <li><a href="">Movies</a></li>
                 <li><a href="">Tv Shows</a></li>
@@ -125,17 +133,6 @@
                 <h2>Popular Movies</h2>
             </div>
             <div class="container-populars">
-                <div class="container-movie">
-                    <div class="container-img-movie"><img src="../img/ahT4ObS7XKedQkOSpGr1wQ97aKA.jpg"></div>
-                    <div class="descripcion-movie">
-                        <p class="movie-title">Star Wars: The Rise of Skywalker </p>
-                        <p class="movie-date">Jan 20, 2020</p>
-                    </div>
-                    <div>
-                        <button class="btn btn-black">View</button>
-                    </div>
-                </div>
-
                 <div class="container-movie">
                     <div class="container-img-movie"><img src="../img/ahT4ObS7XKedQkOSpGr1wQ97aKA.jpg"></div>
                     <div class="descripcion-movie">
@@ -290,5 +287,8 @@
             </div>
         </div>
     </footer>
+    <div class="overlay">
+        
+    </div>
 </body>
 </html>
