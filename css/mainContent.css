@@ -22,6 +22,7 @@ hr{
     margin: 10px 0;  
     border: 1px solid #dddddd ;
     width: 100%;
+    display: none;
 }
 
 .nav-mobile-version{
@@ -49,14 +50,14 @@ nav ul{
     color: white;
     
 }
-
+/* 
 nav ul li{
     
     margin-right: 20px;
    
     
     
-}
+} */
 nav ul li a{ 
     text-decoration: none;   
     display: inline-block;
@@ -69,6 +70,8 @@ nav ul li a:hover{
     background-color: #f9f9f9;
     color: black;
 }
+
+
 
 
 
@@ -209,30 +212,37 @@ main{
 
 }
 span.fa-chevron-right{    
-    padding-top: 15px;
-    transform:rotate(0deg);
-    transition: transform 0.2s;
+    padding-top: 9px;
 }
 
-span.fa-chevron-right:hover{
+/* span.fa-chevron-right:hover{
     transform:rotate(90deg);
 }
+ */
 
-.container-sort > .filter,
-.container-filter > .filter,
+
+
+.container-sort-result,
+.container-show-me,
 .realese-date,
 .genres-movie,
 .container-certificacion{
     width: 100%;
-    display: inline-flex;
+    display: none;
     align-items: flex-start;    
     flex-flow: column wrap; 
     padding:14px 16px;
     
 }
 
+.show{
+    display: inline-flex;
+}
 
-.filter > select{
+
+
+
+.container-sort-result > select{
     width: 100%;
     padding:10px 0;
     background-color: #dddddd;
@@ -408,3 +418,9 @@ span.fa-chevron-right:hover{
     border-radius: 15px; 
     
 }
+
+
+.filters-mobile{
+    display: none;
+}
+
