@@ -1,7 +1,8 @@
 export default class Search{
-    constructor(user){
-        this.password = user.password;
-        this.userName = user.userName;
+    constructor(userName, password){
+        this.userName = userName;
+        this.password = password;
+        
     }
 
     /*
@@ -10,6 +11,10 @@ export default class Search{
     */
     validateUser(){
         return true;
+    }
+
+    logInfoUser(){
+        console.log(`Password: ${this.password} - Username: ${this.userName}`);
     }
     
 }

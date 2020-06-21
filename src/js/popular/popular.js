@@ -1,71 +1,52 @@
-import * as PopularModel from './models';
-import * as PopularViews from './views';
+import InitialSearch from './models/InitialSearch';
+import FilterTab from './models/FilterTab';
+import SortTab from './models/SortTab';
+import * as BaseView from './views/baseView';
+import * as InitialSearchView from './views/initialSearchView';
+import * as FilterTabView from './views/filterTabView';
+import * as SortTabView from './views/sorTabView';
 
-// const showSearchMovieMobile = () => {
+/*
+🔥
+Global state
 
-//     const divFilters =  document.querySelector('.filters-mobile');
-//     const divOverlay = document.querySelector('.overlay');
+*/
+const state = {};
 
-//     if(divFilters && divOverlay){
-//         divOverlay.style.display = 'block';
-//         divFilters.style.display  = 'block';
-//     }
-// };
+const initialSearch =  async () => {
 
-// const bars = document.querySelector('.bars');
+state.popularMovies = new InitialSearch('movie');
+await state.popularMovies.getPopularMovies();
+InitialSearchView.displayPopularMovies(state.popularMovies.movies);
 
-// if(bars){
-//     bars.addEventListener('click', showSearchMovieMobile);
-// }
+}
+const closeSearchMovieMobileView = () => {
+    InitialSearchView.closeVersionMobile();    
+}
 
-// const closeSearchMovieMobile = () => {
-    
-//     const divFilters =  document.querySelector('.filters-mobile');
-//     const divOverlay = document.querySelector('.overlay');
+const showSearchMovieMobileView = () =>  {
 
-//     if(divFilters && divOverlay){
-//         divOverlay.style.display = 'none';
-//         divFilters.style.display  = 'none';
-//     }
-// }
+    InitialSearchView.showVersionMobile()
+};
 
-// const faTimes = document.querySelector('.fa-times');
+const toggleSectionView = (e) => {
 
-// if(faTimes){
-//     faTimes.addEventListener('click', closeSearchMovieMobile);
-// }
+  const parentNodeTarget = e.target.parentNode.parentNode;
 
+  if (parentNodeTarget) InitialSearchView.toggleSection(parentNodeTarget);
+  
+};
 
+const addEventListenerElements = () => {
 
-// const toggleSectionFilter = (e)=> {
+   BaseView.transformToArray(BaseView.elements.iconsFaChevronRight).forEach((element) => {element.addEventListener('click', toggleSectionView);});
+   BaseView.elements.bars.addEventListener('click', showSearchMovieMobileView);
+   BaseView.elements.faTimes.addEventListener('click', closeSearchMovieMobileView);
+}
 
-//     const parentNodeTarget  = e.target.parentNode.parentNode;
+const init = () => {
+    addEventListenerElements();
+    initialSearch();
+};
 
-//     if(parentNodeTarget){
-        
-//         const children = Array.from(parentNodeTarget.children);
-
-//         children.forEach(child => {
-
-//             const childClassList  = Array.from(child.classList);
-         
-//             if(!childClassList.includes('name')){
-
-//                 child.classList.toggle('show');
-//             }
-         
-//         });
-
-//     }
-
-// }
-
-// const nodeClassListFaChevronRight = document.querySelectorAll('.fa-chevron-right');
-
-// if(nodeClassListFaChevronRight ){
-
-//  const arrayFaChevronRigth = Array.from(nodeClassListFaChevronRight);
- 
-//  arrayFaChevronRigth.forEach(faChevronRight => faChevronRight.addEventListener('click', toggleSectionFilter));
-
-// }
+(() => {init()})();

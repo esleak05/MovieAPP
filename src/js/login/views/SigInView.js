@@ -4,8 +4,8 @@ import {elements} from './baseView'
 export const getInputs = ()=> { 
 
     const inputs = {
-        inputUser: elements.inputUser, 
-        inputPassword: elements.inputpassword
+        inputUser: elements.inputUser.value, 
+        inputPassword: elements.inputpassword.value
     }    
 
     return inputs;

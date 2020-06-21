@@ -4,26 +4,41 @@ const  CopyPlugin = require('copy-webpack-plugin');
 
 
 module.exports = {
-    entry: ['./src/js/index.js'],
+    entry: {
+        login: './src/js/login/login.js', 
+        popular: './src/js/popular/popular.js'
+    },
     output: {
         path: path.resolve(__dirname,'dist'),
-        filename: 'js/bundle.js'
+        filename: 'js/[name].bundle.js'
     },
     devServer: {
-        contentBase: './dist'
+        contentBase: './dist/',
+        openPage: 'Login.html'
+        
     },
     plugins: [
         new HtmlWebpackPlugin({
-            filename: 'index.html',
-            template: './src/pages/index.html'
+            template: './src/pages/Login.html',
+            inject:true,
+            chunks:['login'],
+            filename:'dist/js/login.bundle.js',
+            filename:'Login.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/Popular.html',
+            inject:true,
+            chunks:['popular'],
+            filename: 'dist/js/popular.bundle.js',
+            filename: 'Popular.html'
         }),
       
-        new CopyPlugin({
-            patterns:[
-                {from: './src/pages/Popular.html', to: 'pages', force:true}
+        // new CopyPlugin({
+        //     patterns:[
+        //         {from: './src/pages/Popular.html', to: 'pages', force:true}
                 
-            ]
-        })
+        //     ]
+        // })
     ],
     module: {
         rules:[
