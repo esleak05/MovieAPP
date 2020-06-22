@@ -2,7 +2,7 @@ import * as BaseView from './baseView';
 import * as Configuration from '../../config';
 
 
-const renderMovie  = movie => {
+export const renderMovie  = movie => {
 
     const html = `<div class="container-movie">
                     <div class="container-img-movie"><img src="${Configuration.MOVIE_DB_API.url_server_image}${movie.poster_path}" alt="${movie.title}"></div>

@@ -5,7 +5,9 @@ export const elements = {
     divFiltersMobile: document.querySelector('.filters-mobile'),
     divOverlay: document.querySelector('.overlay'),
     faTimes: document.querySelector('.fa-times'),
-    containerPopulars: document.querySelector('.container-populars')
+    containerPopulars: document.querySelector('.container-populars'),
+    btnSearch: document.querySelectorAll('.btn-search'),
+    selectSortResult: document.querySelector('.container-sort-result > select')
 
 }
 

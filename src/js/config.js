@@ -15,9 +15,9 @@ export const information =  {
 
 export const MOVIE_DB_API  = {
 
-    url: 'https://api.themoviedb.org/3/movie/',
+    url: 'https://api.themoviedb.org/3/',
     key: 'd9887a31ff36f8c7291613df224c14b4',
     url_server_image: 'https://image.tmdb.org/t/p/w220_and_h330_face/',
-    lenguague: 'en-US' 
+    languague: 'en-US' 
 
 } 
