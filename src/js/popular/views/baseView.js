@@ -7,7 +7,12 @@ export const elements = {
     faTimes: document.querySelector('.fa-times'),
     containerPopulars: document.querySelector('.container-populars'),
     btnSearch: document.querySelectorAll('.btn-search'),
-    selectSortResult: document.querySelector('.container-sort-result > select')
+    selectSortResult: document.querySelector('.container-sort-result > select'),
+    selectShowMeOption: document.querySelector('input[name="option-filter"]:checked'),
+    inputDateFrom: document.querySelector('.from > input'),
+    inputDateTo: document.querySelector('.to > input '),
+    containerGenres: document.querySelector('.genres-movie > ul'),
+    containerCertifications: document.querySelector('.container-certificacion > ul')
 
 }
 

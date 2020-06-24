@@ -15,7 +15,6 @@ module.exports = {
     devServer: {
         contentBase: './dist/',
         openPage: 'Login.html'
-        
     },
     plugins: [
         new HtmlWebpackPlugin({

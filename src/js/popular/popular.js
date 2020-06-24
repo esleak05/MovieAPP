@@ -13,32 +13,35 @@ Global state
 const state = {};
 
 const searchMovies = async ()=> {
-
+    // BaseView.elements.selectSortResult.options[BaseView.elements.selectSortResult.selectedIndex].value
       const query = {          
-        optionSelected:BaseView.elements.selectSortResult.options[BaseView.elements.selectSortResult.selectedIndex].value,
+        optionSelected:SearchMoviesView.getSortOptions().selectedOption,
+        filterSectionOptions: SearchMoviesView.getFilterOptions(),
         page: 1
-
       }
+      console.log(query);
 
-     state.searchMovies= new SearchMovies(query); 
-     await state.searchMovies.getMovies();     
-     SearchMoviesView.clearContainerMovies();
-     InitialSearchView.displayPopularMovies(state.searchMovies.movies);
+    //  state.searchMovies= new SearchMovies(query); 
+    //  await state.searchMovies.getMovies();     
+    //  SearchMoviesView.clearContainerMovies();
+    //  InitialSearchView.displayPopularMovies(state.searchMovies.movies);
 }
 
 const initialSearch =  async () => {
 
-const query = {
-    lenguage: Configuration.MOVIE_DB_API.lenguague,
-    filter: 'popular',
+const query = {    
     page: 1
 }
 
-state.popularMovies = new InitialSearch(query);
+state.InitialSearch = new InitialSearch(query);
 
-await state.popularMovies.getMovies();
+await state.InitialSearch.getMovies();
+await state.InitialSearch.getGenres();
+await state.InitialSearch.getCertifications();
 
-InitialSearchView.displayPopularMovies(state.popularMovies.movies);
+InitialSearchView.displayPopularMovies(state.InitialSearch.movies);
+InitialSearchView.displayGenres(state.InitialSearch.genres);
+InitialSearchView.displayCertifications(state.InitialSearch.certifications);
 
 }
 const closeSearchMovieMobileView = () => {
